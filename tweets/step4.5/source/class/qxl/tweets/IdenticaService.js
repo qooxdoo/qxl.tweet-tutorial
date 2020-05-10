@@ -1,4 +1,4 @@
-qx.Class.define("tweets.IdenticaService",
+qx.Class.define("qxl.tweets.IdenticaService",
 {
   extend : qx.core.Object,
 
@@ -22,8 +22,8 @@ qx.Class.define("tweets.IdenticaService",
 
     fetchTweets : function() {
       if (this.__store == null) {
-        var version = qx.core.Environment.get("qx.version");
-        var url = "http://demo.qooxdoo.org/" + version + "/tweets_step4.5/resource/tweets/service.js";
+        var location = window.location;
+        var url = location.origin + "/resource/qxl/tweets/service.js";
         this.__store = new qx.data.store.Jsonp();
         this.__store.setCallbackName("callback");
         this.__store.setUrl(url);

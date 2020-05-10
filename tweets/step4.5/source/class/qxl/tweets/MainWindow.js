@@ -1,10 +1,10 @@
-qx.Class.define("tweets.MainWindow",
+qx.Class.define("qxl.tweets.MainWindow",
 {
   extend : qx.ui.window.Window,
 
   construct : function()
   {
-    this.base(arguments, "tweets", "tweets/logo.png");
+    this.base(arguments, "tweets", "qxl/tweets/logo.png");
 
     // hide the window buttons
     this.setShowClose(false);

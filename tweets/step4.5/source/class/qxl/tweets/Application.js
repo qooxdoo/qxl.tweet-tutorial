@@ -16,9 +16,9 @@
 /**
  * This is the main application class of your custom application "tweets"
  *
- * @asset(tweets/*)
+ * @asset(qxl/tweets/*)
  */
-qx.Class.define("tweets.Application",
+qx.Class.define("qxl.tweets.Application",
 {
   extend : qx.application.Standalone,
 
@@ -59,11 +59,11 @@ qx.Class.define("tweets.Application",
       */
 
 
-      var main = new tweets.MainWindow();
+      var main = new qxl.tweets.MainWindow();
       main.moveTo(50, 30);
       main.open();
 
-      var service = new tweets.IdenticaService();
+      var service = new qxl.tweets.IdenticaService();
 
       // handler after posting a tweet
       service.addListener("postOk", function() {

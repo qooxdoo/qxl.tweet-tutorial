@@ -8,14 +8,14 @@
 
 ************************************************************************ */
 
-qx.Theme.define("tweets.theme.Theme",
+qx.Theme.define("qxl.tweets.theme.Theme",
 {
   meta :
   {
-    color : tweets.theme.Color,
-    decoration : tweets.theme.Decoration,
-    font : tweets.theme.Font,
+    color : qxl.tweets.theme.Color,
+    decoration : qxl.tweets.theme.Decoration,
+    font : qxl.tweets.theme.Font,
     icon : qx.theme.icon.Tango,
-    appearance : tweets.theme.Appearance
+    appearance : qxl.tweets.theme.Appearance
   }
 });

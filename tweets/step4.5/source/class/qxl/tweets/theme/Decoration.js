@@ -8,7 +8,7 @@
 
 ************************************************************************ */
 
-qx.Theme.define("tweets.theme.Decoration",
+qx.Theme.define("qxl.tweets.theme.Decoration",
 {
   extend : qx.theme.indigo.Decoration,
 
