@@ -50,7 +50,7 @@ qx.Class.define("qxl.tweets.MainWindow",
     // post button
     var postButton = new qx.ui.form.Button("Post");
     this.add(postButton, {row: 2, column: 1});
-    postButton.setToolTipText("Post this message on identi.ca");
+    postButton.setToolTipText("Post this message to tweets service");
     postButton.addListener("execute", function() {
       this.fireDataEvent("post", this.__textarea.getValue());
     }, this);
