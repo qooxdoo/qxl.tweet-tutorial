@@ -1,0 +1,6 @@
+{
+  "libraries": [
+   { "path":"relative-path/to/dir-containing-manifest1" },
+   { "path":"relative-path/to/dir-containing-manifest2", main: true }
+ ]
+}
