@@ -19,7 +19,7 @@
 /**
  * This page displays an input form to enter the username to show.
  */
-qx.Class.define("mobiletweets.page.Input",
+qx.Class.define("qxl.mobiletweets.page.Input",
 {
   extend : qx.ui.mobile.page.NavigationPage,
 

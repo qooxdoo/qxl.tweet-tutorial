@@ -1,6 +1,4 @@
-/build/
-/build-ios/
-/build-android/
 /api/
+/build/
 /test/
 /source/script/

@@ -19,7 +19,7 @@
 /**
  * This page displays all tweets of a user.
  */
-qx.Class.define("mobiletweets.page.Tweets",
+qx.Class.define("qxl.mobiletweets.page.Tweets",
 {
   extend : qx.ui.mobile.page.NavigationPage,
 

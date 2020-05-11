@@ -1,34 +1,32 @@
 {
-  "info" : 
-  {
-    "name" : "mobiletweets",
-
-    "summary" : "Custom Mobile Application",
-    "description" : "This is a skeleton for a custom mobile application with qooxdoo.",
-    
-    "homepage" : "http://some.homepage.url/",
-
-    "license" : "SomeLicense",
-    "authors" : 
-    [
+  "$schema": "https://raw.githubusercontent.com/qooxdoo/qooxdoo-compiler/master/source/resource/qx/tool/schema/Manifest-1-0-0.json",
+  "info": {
+    "name": "tweets",
+    "summary": "tweets tutorial app",
+    "description": "This is a demo app for tweets using a twitter-like service.",
+    "homepage": "http://qooxdoo.org/",
+    "license": "MIT",
+    "authors": [
       {
-        "name" : "First Author (uid)",
-        "email" : "first.author@some.domain"
+        "name": "Martin Wittemann (martinwittemann)",
+        "email": "martin DOT wittemann AT 1und1 DOT de"
+      },
+      {
+        "name": "Henner Kollmann (hkollmann)",
+        "email": "Henner.Kollmann@gmx.de"
       }
     ],
-
-    "version" : "trunk",
-    "qooxdoo-versions": ["trunk"]
+    "version": "1.0.0"
   },
-  
-  "provides" : 
-  {
-    "namespace"   : "mobiletweets",
-    "encoding"    : "utf-8",
-    "class"       : "source/class",
-    "resource"    : "source/resource",
-    "translation" : "source/translation",
-    "type"        : "application"
+  "provides": {
+    "namespace": "qxl.tweets",
+    "encoding": "utf-8",
+    "class": "source/class",
+    "resource": "source/resource",
+    "translation": "source/translation"
+  },
+  "requires": {
+    "@qooxdoo/compiler": "^1.0.0-beta",
+    "@qooxdoo/framework": "^6.0.0-beta"
   }
 }
-

@@ -24,9 +24,9 @@
 /**
  * This is the main application class of your custom application "mobiletweets"
  *
- * @asset(mobiletweets/css/*)
+ * @asset(qxl/mobiletweets/*)
  */
-qx.Class.define("mobiletweets.Application",
+qx.Class.define("qxl.mobiletweets.Application",
 {
   extend : qx.application.Mobile,
 
@@ -95,7 +95,7 @@ qx.Class.define("mobiletweets.Application",
       var manager = new qx.ui.mobile.page.Manager(false);
 
       // Create an instance of the Input class and initial show it
-      var inputPage = this.__inputPage = new mobiletweets.page.Input();
+      var inputPage = this.__inputPage = new qxl.mobiletweets.page.Input();
 
       // Add page to manager
       manager.addDetail(inputPage);
@@ -104,7 +104,7 @@ qx.Class.define("mobiletweets.Application",
       inputPage.show();
 
       // Create an instance of the Tweets class and establish data bindings
-      var tweetsPage = new mobiletweets.page.Tweets();
+      var tweetsPage = new qxl.mobiletweets.page.Tweets();
       this.bind("tweets", tweetsPage, "tweets");
       this.bind("username", tweetsPage, "title");
 
@@ -112,7 +112,7 @@ qx.Class.define("mobiletweets.Application",
       manager.addDetail(tweetsPage);
 
       // Create an instance of the Tweet class
-      var tweetPage = new mobiletweets.page.TweetDetail();
+      var tweetPage = new qxl.mobiletweets.page.TweetDetail();
 
       // Add page to manager
       manager.addDetail(tweetPage);

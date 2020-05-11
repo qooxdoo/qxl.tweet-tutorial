@@ -19,7 +19,7 @@
 /**
  * This page displays a single tweet.
  */
-qx.Class.define("mobiletweets.page.TweetDetail",
+qx.Class.define("qxl.mobiletweets.page.TweetDetail",
 {
   extend : qx.ui.mobile.page.NavigationPage,
 
