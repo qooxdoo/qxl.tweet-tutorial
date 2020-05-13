@@ -1,6 +1,14 @@
 {
   "libraries": [
-   { "path":"relative-path/to/dir-containing-manifest1" },
-   { "path":"relative-path/to/dir-containing-manifest2", main: true }
+   { "path":"tweets/step1" },
+   { "path":"tweets/step2" },
+   { "path":"tweets/step3" },
+   { "path":"tweets/step4.1" },
+   { "path":"tweets/step4.2" },
+   { "path":"tweets/step4.2.1" },
+   { "path":"tweets/step4.3" },
+   { "path":"tweets/step4.4" },
+   { "path":"tweets/step4.5" },
+   { "path":"mobiletweets/step1" }
  ]
 }
