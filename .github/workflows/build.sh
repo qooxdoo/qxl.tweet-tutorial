@@ -27,6 +27,6 @@ pushd tweets/step4.5
 npx qx deploy --out=../../html/step4.5  --clean --source-maps
 popd
 pushd mobiletweets/step1
-npx qx deploy --out=../../html/mobiletweets  --clean --source-maps
+npx qx deploy --out=../../html/mobile  --clean --source-maps
 popd
 
