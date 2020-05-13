@@ -17,7 +17,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install @qooxdoo/compiler -g
+          sudo npm install @qooxdoo/compiler -g
           ./.github/workflows/build.sh
 
       - name: Deploy
