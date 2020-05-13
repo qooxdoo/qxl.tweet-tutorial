@@ -1,8 +1,7 @@
 npm install @qooxdoo/compiler -g
 mkdir html
 pushd tweets/step1
-qx deploy --out=../../html/step1    
---clean --source-maps
+qx deploy --out=../../html/step1    --clean --source-maps
 popd                             
 pushd tweets/step2               
 qx deploy --out=../../html/step2    --clean --source-maps
