@@ -15,10 +15,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build
-        run: |
-          sudo npm install @qooxdoo/compiler -g
-          ./.github/workflows/build.sh
+      - name: Install
+        run: sudo npm install @qooxdoo/compiler -g
+
+      - name: Build
+        run:  ./.github/workflows/build.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
