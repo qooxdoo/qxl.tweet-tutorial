@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
 
       - name: Install
-        run: npm install @qooxdoo/compiler
+        run: npm install @qooxdoo/compiler --no-save
 
       - name: Build
         run:  ./.github/workflows/build.sh
