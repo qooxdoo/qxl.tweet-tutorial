@@ -19,7 +19,7 @@
     "version": "1.0.0"
   },
   "provides": {
-    "namespace": "qxl.tweets",
+    "namespace": "qxl.mobiletweets",
     "encoding": "utf-8",
     "class": "source/class",
     "resource": "source/resource",
