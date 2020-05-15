@@ -23,7 +23,7 @@
   "applications": [
     {
       "class": "qxl.mobiletweets.Application", 
-      "name": "mobile tutorial",
+      "name": "mobiletweets",
       "include": [
         "qx.*"
       ]

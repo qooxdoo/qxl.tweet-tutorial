@@ -25,6 +25,12 @@
     "resource": "source/resource",
     "translation": "source/translation"
   },
+  "externalResources": {
+    "script": [],
+    "css": [
+      "qxl/mobiletweets/scss/indigo.scss"
+    ]
+  },
   "requires": {
     "@qooxdoo/compiler": "^1.0.0-beta",
     "@qooxdoo/framework": "^6.0.0-beta"
