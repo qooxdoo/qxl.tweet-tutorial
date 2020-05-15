@@ -2,8 +2,8 @@
 The tweet tutorial moved to a seperate project
 
 ## Online versions of the different steps:
-|    |   |
-| -- | --|
+|                 |   |
+| --              | --|
 | Step 1          | http://www.qooxdoo.org/qxl.tweet-tutorial/step1       |
 | Step 2          | http://www.qooxdoo.org/qxl.tweet-tutorial/step2       |
 |  Step 3         | http://www.qooxdoo.org/qxl.tweet-tutorial/step3       |
