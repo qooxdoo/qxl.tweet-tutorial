@@ -1,59 +1,42 @@
-# 
+#. NO LONGER USED
 msgid ""
-msgstr ""
-"Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: you@your.org\n"
-"POT-Creation-Date: 2010-08-31 13:24+0100\n"
-"PO-Revision-Date: 2010-08-31 13:24+0100\n"
-"Last-Translator: you <you@your.org>\n"
-"Language-Team: Team <yourteam@your.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: 1.0\nReport-Msgid-Bugs-To: you@your.org\nPOT-Creation-Date: 2010-08-31 13:24+0100\nPO-Revision-Date: 2010-08-31 13:24+0100\nLast-Translator: you <you@your.org>\nLanguage-Team: Team <yourteam@your.org>\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\n"
 
-#: tweets/MainWindow.js:30
+#: qxl/tweets/MainWindow.js
 msgid "Reload"
 msgstr "Neu Laden"
 
-#: tweets/MainWindow.js:32
+#: qxl/tweets/MainWindow.js
 msgid "Reload the tweets."
 msgstr "tweets neu laden."
 
-#: tweets/MainWindow.js:44
+#: qxl/tweets/MainWindow.js
 msgid "Change the applications settings."
 msgstr "Einstellungen der Anwendung ändern."
 
-#: tweets/MainWindow.js:60
+#: qxl/tweets/MainWindow.js
 msgid "Enter your message here..."
 msgstr "Nachricht hier eingeben..."
 
-#: tweets/MainWindow.js:67
+#: qxl/tweets/MainWindow.js
 msgid "Post"
 msgstr "Absenden"
 
-#: tweets/MainWindow.js:69
+#: qxl/tweets/MainWindow.js
 msgid "Post this message on identi.ca"
 msgstr ""
 
-#: tweets/SettingsWindow.js:8 tweets/MainWindow.js:42
+#: qxl/tweets/SettingsWindow.js
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: tweets/SettingsWindow.js:13
+#: qxl/tweets/SettingsWindow.js
 msgid "Language"
 msgstr "Sprache"
 
-#: tweets/SettingsWindow.js:20
+#: qxl/tweets/SettingsWindow.js
 msgid "$$languagename"
 msgstr "Deutsch"
 
-#: tweets/SettingsWindow.js:13
-msgid "Language"
-msgstr "Sprache"
-
-#: tweets/SettingsWindow.js:20
-msgid "$$languagename"
-msgstr "Deutsch"
-
-#~ msgid "Post this message on identica."
-#~ msgstr "Sende deine Nachricht an identica."
+#. NO LONGER USED
+msgstr ""
