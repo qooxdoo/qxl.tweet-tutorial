@@ -16,7 +16,7 @@
         "email": "Henner.Kollmann@gmx.de"
       }
     ],
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "provides": {
     "namespace": "qxl.tweets",
