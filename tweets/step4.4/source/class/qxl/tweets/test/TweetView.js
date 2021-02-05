@@ -10,19 +10,16 @@ qx.Class.define("qxl.tweets.test.TweetView", {
   {
     __tweetView : null,
 
-    setUp : function()
-    {
+    setUp : function() {
       this.__tweetView = new qxl.tweets.TweetView();
     },
 
-    tearDown : function()
-    {
+    tearDown : function() {
       this.__tweetView.dispose();
       this.__tweetView = null;
     },
 
-    testSetIcon : function()
-    {
+    testSetIcon : function() {
       var expectedSource = qx.util.ResourceManager.getInstance().toUri("logo.png");
       this.__tweetView.setIcon(expectedSource);
       var foundSource = this.__tweetView.getChildControl("icon").getSource();

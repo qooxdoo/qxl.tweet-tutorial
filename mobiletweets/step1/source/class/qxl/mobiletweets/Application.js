@@ -70,14 +70,12 @@ qx.Class.define("qxl.mobiletweets.Application",
      * This method contains the initial application code and gets called
      * during startup of the application
      */
-    main : function()
-    {
+    main : function() {
       // Call super class
       this.base(arguments);
 
       // Enable logging in debug variant
-      if (qx.core.Environment.get("qx.debug"))
-      {
+      if (qx.core.Environment.get("qx.debug")) {
         // support native logging capabilities, e.g. Firebug for Firefox
         qx.log.appender.Native;
         // support additional cross-browser console. Press F7 to toggle visibility
@@ -161,8 +159,7 @@ qx.Class.define("qxl.mobiletweets.Application",
     /**
      * Loads all tweets of the currently set user.
      */
-    __loadTweets : function()
-    {
+    __loadTweets : function() {
       // Mocked Identica Tweets API
       // Create a new JSONP store instance with the given url
       var url = "http://demo.qooxdoo.org/" + qx.core.Environment.get("qx.version") + "/tweets_step4.5/resource/tweets/service.js";

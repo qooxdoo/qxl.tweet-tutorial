@@ -20,7 +20,7 @@ qx.Theme.define("qxl.tweets.theme.Appearance",
       style : function() {
         return {
           textColor: "tweet-time"
-        }
+        };
       }
     },
 
@@ -28,7 +28,7 @@ qx.Theme.define("qxl.tweets.theme.Appearance",
       style : function() {
         return {
           backgroundColor : "window-border-inner"
-        }
+        };
       }
     }
   }

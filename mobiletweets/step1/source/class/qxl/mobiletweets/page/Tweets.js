@@ -57,8 +57,7 @@ qx.Class.define("qxl.mobiletweets.page.Tweets",
     __list : null,
 
     // overridden
-    _initialize : function()
-    {
+    _initialize : function() {
       this.base(arguments);
 
       // Create a new list instance
@@ -88,8 +87,7 @@ qx.Class.define("qxl.mobiletweets.page.Tweets",
      *
      * @param evt {qx.event.type.Data} the causing event.
      */
-    __onChangeSelection : function(evt)
-    {
+    __onChangeSelection : function(evt) {
       // retrieve the index of the selected row
       var index = evt.getData();
       this.fireDataEvent("showTweet", index);
@@ -97,8 +95,7 @@ qx.Class.define("qxl.mobiletweets.page.Tweets",
   },
 
 
-  destruct : function()
-  {
+  destruct : function() {
     this._disposeObjects("__list");
   }
 });

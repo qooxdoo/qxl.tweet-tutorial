@@ -21,8 +21,7 @@ qx.Class.define("qxl.tweets.IdenticaService",
 
 
     fetchTweets : function() {
-      if (this.__store == null) {
-        var version = qx.core.Environment.get("qx.version");
+      if (this.__store === null) {
         var location = window.location;
         var url = location.origin + "/resource/qxl/tweets/service.js";
         this.__store = new qx.data.store.Jsonp();
@@ -34,11 +33,12 @@ qx.Class.define("qxl.tweets.IdenticaService",
       }
     },
 
-
     /**
+     * @param message
      * @lint ignoreDeprecated(alert)
      */
     post : function(message) {
+      /* eslint-disable-next-line no-alert */
       alert("Post this message: " + message);
     }
   }

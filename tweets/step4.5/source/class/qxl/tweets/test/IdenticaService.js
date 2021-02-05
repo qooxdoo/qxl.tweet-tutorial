@@ -6,19 +6,16 @@ qx.Class.define("qxl.tweets.test.IdenticaService", {
   {
     __identicaService : null,
 
-    setUp : function()
-    {
+    setUp : function() {
       this.__identicaService = new qxl.tweets.IdenticaService();
     },
 
-    tearDown : function()
-    {
+    tearDown : function() {
       this.__identicaService.dispose();
       this.__identicaService = null;
     },
 
-    testFetchTweets : function()
-    {
+    testFetchTweets : function() {
       this.__identicaService.addListener("changeTweets", function() {
         this.resume();
       }, this);

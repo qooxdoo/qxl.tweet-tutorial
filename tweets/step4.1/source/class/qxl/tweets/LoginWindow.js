@@ -6,8 +6,7 @@ qx.Class.define("qxl.tweets.LoginWindow",
     "changeLoginData" : "qx.event.type.Data"
   },
 
-  construct : function()
-  {
+  construct : function() {
     this.base(arguments, "Login", "qxl/tweets/logo.png");
     var layout = new qx.ui.layout.Basic();
     this.setLayout(layout);
@@ -48,7 +47,6 @@ qx.Class.define("qxl.tweets.LoginWindow",
 
     var renderer = new qx.ui.form.renderer.Single(form);
     this.add(renderer);
-
   }
 
 });

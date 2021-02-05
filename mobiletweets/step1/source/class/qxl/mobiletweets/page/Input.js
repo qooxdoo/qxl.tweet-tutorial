@@ -40,8 +40,7 @@ qx.Class.define("qxl.mobiletweets.page.Input",
     __input : null,
 
     // overridden
-    _initialize : function()
-    {
+    _initialize : function() {
       this.base(arguments);
 
       var title = new qx.ui.mobile.form.Title("Please enter an identi.ca username");
@@ -71,11 +70,9 @@ qx.Class.define("qxl.mobiletweets.page.Input",
      * On Tap handler. Called when the user taps on the input button.
      * @param evt {qx.event.type.Data} the causing event.
      */
-    _onTap : function(evt)
-    {
+    _onTap : function(evt) {
       // validate the form
-      if (this.__form.validate())
-      {
+      if (this.__form.validate()) {
         var username = this.__input.getValue();
         this.fireDataEvent("requestTweet", username);
       }

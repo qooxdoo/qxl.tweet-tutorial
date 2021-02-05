@@ -2,8 +2,7 @@ qx.Class.define("qxl.tweets.MainWindow",
 {
   extend : qx.ui.window.Window,
 
-  construct : function()
-  {
+  construct : function() {
     this.base(arguments, "tweets");
 
     // hide the window buttons

@@ -2,8 +2,7 @@ qx.Class.define("qxl.tweets.MainWindow",
 {
   extend : qx.ui.window.Window,
 
-  construct : function()
-  {
+  construct : function() {
     this.base(arguments, "tweets", "qxl/tweets/logo.png");
 
     // hide the window buttons
@@ -45,7 +44,7 @@ qx.Class.define("qxl.tweets.MainWindow",
     settingsButton.addListener("execute", function() {
       if (!settingsWindow) {
         settingsWindow = new qxl.tweets.SettingsWindow();
-        settingsWindow.moveTo(320,30);
+        settingsWindow.moveTo(320, 30);
       }
       settingsWindow.open();
     }, this);

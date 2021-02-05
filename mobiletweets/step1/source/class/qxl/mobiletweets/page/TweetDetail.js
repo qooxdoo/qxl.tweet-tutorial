@@ -48,8 +48,7 @@ qx.Class.define("qxl.mobiletweets.page.TweetDetail",
   members :
   {
     // overridden
-    _initialize : function()
-    {
+    _initialize : function() {
       this.base(arguments);
       // Create a new label instance
       var label = new qx.ui.mobile.basic.Label();

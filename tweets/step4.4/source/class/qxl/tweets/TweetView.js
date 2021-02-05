@@ -3,8 +3,7 @@ qx.Class.define("qxl.tweets.TweetView",
   extend : qx.ui.core.Widget,
   include : [qx.ui.form.MModelProperty],
 
-  construct : function()
-  {
+  construct : function() {
     this.base(arguments);
 
     // create a date format like "June 18, 2010 9:31 AM"
@@ -59,12 +58,10 @@ qx.Class.define("qxl.tweets.TweetView",
     _dateFormat : null,
 
     // overridden
-    _createChildControlImpl : function(id)
-    {
+    _createChildControlImpl : function(id) {
       var control;
 
-      switch(id)
-      {
+      switch (id) {
         case "icon":
           control = new qx.ui.basic.Image(this.getIcon());
           control.setAnonymous(true);
@@ -94,22 +91,19 @@ qx.Class.define("qxl.tweets.TweetView",
       icon.setSource(value);
     },
 
-    _applyPost : function(value, old)
-    {
+    _applyPost : function(value, old) {
       var post = this.getChildControl("post");
       post.setValue(value);
     },
 
     // property apply
-    _applyTime : function(value, old)
-    {
+    _applyTime : function(value, old) {
       var time = this.getChildControl("time");
       time.setValue(this._dateFormat.format(value));
     }
   },
 
-  destruct : function()
-  {
+  destruct : function() {
     this._dateFormat.dispose();
     this._dateFormat = null;
   }

@@ -3,8 +3,7 @@ qx.Class.define("qxl.tweets.SettingsWindow",
   extend : qx.ui.window.Window,
 
 
-  construct : function()
-  {
+  construct : function() {
     this.base(arguments, this.tr("Preferences"));
     this.setLayout(new qx.ui.layout.Basic());
 
@@ -32,7 +31,7 @@ qx.Class.define("qxl.tweets.SettingsWindow",
       if (currentLocale == locale) {
         localeButton.setValue(true);
       }
-    };
+    }
 
 
     // get the model selection and listen to its change
