@@ -1,10 +1,8 @@
-qx.Class.define("qxl.tweets.SettingsWindow",
-{
-  extend : qx.ui.window.Window,
+qx.Class.define("qxl.tweets.SettingsWindow", {
+  extend: qx.ui.window.Window,
 
-
-  construct : function() {
-    this.base(arguments, this.tr("Preferences"));
+  construct() {
+    super(this.tr("Preferences"));
     this.setLayout(new qx.ui.layout.Basic());
 
     var form = new qx.ui.form.Form();
@@ -33,15 +31,18 @@ qx.Class.define("qxl.tweets.SettingsWindow",
       }
     }
 
-
     // get the model selection and listen to its change
-    radioGroup.getModelSelection().addListener("change", function(e) {
-      // selection is the first item of the data array
-      var newLocale = radioGroup.getModelSelection().getItem(0);
-      localeManager.setLocale(newLocale);
-    }, this);
+    radioGroup.getModelSelection().addListener(
+      "change",
+      function (e) {
+        // selection is the first item of the data array
+        var newLocale = radioGroup.getModelSelection().getItem(0);
+        localeManager.setLocale(newLocale);
+      },
+      this
+    );
 
     var renderer = new qx.ui.form.renderer.Single(form);
     this.add(renderer);
-  }
+  },
 });

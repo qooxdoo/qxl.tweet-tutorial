@@ -1,26 +1,21 @@
-qx.Class.define("qxl.tweets.IdenticaService",
-{
-  extend : qx.core.Object,
+qx.Class.define("qxl.tweets.IdenticaService", {
+  extend: qx.core.Object,
 
-  properties : {
-    tweets : {
+  properties: {
+    tweets: {
       nullable: true,
-      event: "changeTweets"
-    }
+      event: "changeTweets",
+    },
   },
 
-
-  events : {
-    "postOk" : "qx.event.type.Event"
+  events: {
+    postOk: "qx.event.type.Event",
   },
 
+  members: {
+    __store: null,
 
-  members :
-  {
-    __store : null,
-
-
-    fetchTweets : function() {
+    fetchTweets() {
       if (this.__store === null) {
         var location = window.location;
         var url = location.origin + "/resource/qxl/tweets/service.js";
@@ -37,9 +32,9 @@ qx.Class.define("qxl.tweets.IdenticaService",
      * @param message
      * @lint ignoreDeprecated(alert)
      */
-    post : function(message) {
+    post(message) {
       /* eslint-disable-next-line no-alert */
       alert("Post this message: " + message);
-    }
-  }
+    },
+  },
 });

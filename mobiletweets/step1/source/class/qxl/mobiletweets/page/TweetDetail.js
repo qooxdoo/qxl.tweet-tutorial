@@ -19,42 +19,37 @@
 /**
  * This page displays a single tweet.
  */
-qx.Class.define("qxl.mobiletweets.page.TweetDetail",
-{
-  extend : qx.ui.mobile.page.NavigationPage,
+qx.Class.define("qxl.mobiletweets.page.TweetDetail", {
+  extend: qx.ui.mobile.page.NavigationPage,
 
-  construct : function() {
-    this.base(arguments);
+  construct() {
+    super();
     this.set({
-      title : "Details",
-      showBackButton : true,
-      backButtonText : "Back"
+      title: "Details",
+      showBackButton: true,
+      backButtonText: "Back",
     });
   },
 
-
-  properties:
-  {
+  properties: {
     /** Holds the current shown tweet */
-    tweet :
-    {
-      check : "Object",
-      nullable : true,
-      init : null,
-      event : "changeTweet"
-    }
+    tweet: {
+      check: "Object",
+      nullable: true,
+      init: null,
+      event: "changeTweet",
+    },
   },
 
-  members :
-  {
+  members: {
     // overridden
-    _initialize : function() {
-      this.base(arguments);
+    _initialize() {
+      super._initialize();
       // Create a new label instance
       var label = new qx.ui.mobile.basic.Label();
       this.getContent().add(label);
       // bind the "tweet.getText" property to the "value" of the label
       this.bind("tweet.text", label, "value");
-    }
-  }
+    },
+  },
 });

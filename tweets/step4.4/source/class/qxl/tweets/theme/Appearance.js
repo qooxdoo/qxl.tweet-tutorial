@@ -8,28 +8,26 @@
 
 ************************************************************************ */
 
-qx.Theme.define("qxl.tweets.theme.Appearance",
-{
-  extend : qx.theme.simple.Appearance,
+qx.Theme.define("qxl.tweets.theme.Appearance", {
+  extend: qx.theme.simple.Appearance,
 
-  appearances :
-  {
-    "tweet-view" : {},
+  appearances: {
+    "tweet-view": {},
 
-    "tweet-view/time" : {
-      style : function() {
+    "tweet-view/time": {
+      style() {
         return {
-          textColor: "tweet-time"
+          textColor: "tweet-time",
         };
-      }
+      },
     },
 
-    "toolbar" : {
-      style : function() {
+    toolbar: {
+      style() {
         return {
-          backgroundColor : "window-border-inner"
+          backgroundColor: "window-border-inner",
         };
-      }
-    }
-  }
+      },
+    },
+  },
 });

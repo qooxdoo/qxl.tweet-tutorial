@@ -1,13 +1,12 @@
-qx.Class.define("qxl.tweets.LoginWindow",
-{
-  extend : qx.ui.window.Window,
+qx.Class.define("qxl.tweets.LoginWindow", {
+  extend: qx.ui.window.Window,
 
-  events : {
-    "changeLoginData" : "qx.event.type.Data"
+  events: {
+    changeLoginData: "qx.event.type.Data",
   },
 
-  construct : function() {
-    this.base(arguments, "Login", "qxl/tweets/logo.png");
+  construct() {
+    super("Login", "qxl/tweets/logo.png");
     var layout = new qx.ui.layout.Basic();
     this.setLayout(layout);
     this.setModal(true);
@@ -27,26 +26,34 @@ qx.Class.define("qxl.tweets.LoginWindow",
 
     var loginbutton = new qx.ui.form.Button("Login");
     form.addButton(loginbutton);
-    loginbutton.addListener("execute", function() {
-      if (form.validate()) {
-        var loginData = {
-          username : controller.getModel().getUsername(),
-          password : controller.getModel().getPassword()
-        };
-        this.fireDataEvent("changeLoginData", loginData);
-        this.close();
-      }
-    }, this);
+    loginbutton.addListener(
+      "execute",
+      function () {
+        if (form.validate()) {
+          var loginData = {
+            username: controller.getModel().getUsername(),
+            password: controller.getModel().getPassword(),
+          };
+
+          this.fireDataEvent("changeLoginData", loginData);
+          this.close();
+        }
+      },
+      this
+    );
 
     // add a reset button
     var cancelbutton = new qx.ui.form.Button("Cancel");
     form.addButton(cancelbutton);
-    cancelbutton.addListener("execute", function() {
-      this.close();
-    }, this);
+    cancelbutton.addListener(
+      "execute",
+      function () {
+        this.close();
+      },
+      this
+    );
 
     var renderer = new qx.ui.form.renderer.Single(form);
     this.add(renderer);
-  }
-
+  },
 });

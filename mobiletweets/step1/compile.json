@@ -26,6 +26,9 @@
       "name": "mobiletweets",
       "include": [
         "qx.*"
+      ],
+      "exclude": [
+          "qx.tool.*"
       ]
     }
 	

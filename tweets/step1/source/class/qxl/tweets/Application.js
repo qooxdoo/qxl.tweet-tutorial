@@ -25,11 +25,8 @@
  *
  * @asset(qxl/tweets/*)
  */
-qx.Class.define("qxl.tweets.Application",
-{
-  extend : qx.application.Standalone,
-
-
+qx.Class.define("qxl.tweets.Application", {
+  extend: qx.application.Standalone,
 
   /*
   *****************************************************************************
@@ -37,17 +34,16 @@ qx.Class.define("qxl.tweets.Application",
   *****************************************************************************
   */
 
-  members :
-  {
+  members: {
     /**
      * This method contains the initial application code and gets called
      * during startup of the application
      *
      * @lint ignoreDeprecated(alert)
      */
-    main : function() {
+    main() {
       // Call super class
-      this.base(arguments);
+      super.main();
 
       // Enable logging in debug variant
       if (qx.core.Environment.get("qx.debug")) {
@@ -63,10 +59,9 @@ qx.Class.define("qxl.tweets.Application",
       -------------------------------------------------------------------------
       */
 
-
       var main = new qxl.tweets.MainWindow();
       main.moveTo(50, 30);
       main.open();
-    }
-  }
+    },
+  },
 });

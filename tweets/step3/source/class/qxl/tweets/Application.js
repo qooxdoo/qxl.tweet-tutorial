@@ -18,11 +18,8 @@
  *
  * @asset(qxl/tweets/*)
  */
-qx.Class.define("qxl.tweets.Application",
-{
-  extend : qx.application.Standalone,
-
-
+qx.Class.define("qxl.tweets.Application", {
+  extend: qx.application.Standalone,
 
   /*
   *****************************************************************************
@@ -30,17 +27,16 @@ qx.Class.define("qxl.tweets.Application",
   *****************************************************************************
   */
 
-  members :
-  {
+  members: {
     /**
      * This method contains the initial application code and gets called
      * during startup of the application
      *
      * @lint ignoreDeprecated(alert)
      */
-    main : function() {
+    main() {
       // Call super class
-      this.base(arguments);
+      super.main();
 
       // Enable logging in debug variant
       if (qx.core.Environment.get("qx.debug")) {
@@ -56,7 +52,6 @@ qx.Class.define("qxl.tweets.Application",
       -------------------------------------------------------------------------
       */
 
-
       var main = new qxl.tweets.MainWindow();
       main.moveTo(50, 30);
       main.open();
@@ -64,37 +59,50 @@ qx.Class.define("qxl.tweets.Application",
       var service = new qxl.tweets.IdenticaService();
 
       // handler after posting a tweet
-      service.addListener("postOk", function() {
-        main.clearPostMessage();
-        service.fetchTweets();
-      }, this);
+      service.addListener(
+        "postOk",
+        function () {
+          main.clearPostMessage();
+          service.fetchTweets();
+        },
+        this
+      );
 
       // reload handling
-      main.addListener("reload", function() {
-        service.fetchTweets();
-      }, this);
+      main.addListener(
+        "reload",
+        function () {
+          service.fetchTweets();
+        },
+        this
+      );
 
       // post handling
-      main.addListener("post", function(e) {
-        service.post(e.getData());
-      }, this);
+      main.addListener(
+        "post",
+        function (e) {
+          service.post(e.getData());
+        },
+        this
+      );
 
       // create the controller
       var controller = new qx.data.controller.List(null, main.getList());
       controller.setLabelPath("text");
       controller.setIconPath("user.profile_image_url");
       controller.setDelegate({
-        configureItem : function(item) {
+        configureItem(item) {
           item.getChildControl("icon").setWidth(48);
           item.getChildControl("icon").setHeight(48);
           item.getChildControl("icon").setScale(true);
           item.setRich(true);
-        }
+        },
       });
+
       service.bind("tweets", controller, "model");
 
       // start the loading on startup
       service.fetchTweets();
-    }
-  }
+    },
+  },
 });

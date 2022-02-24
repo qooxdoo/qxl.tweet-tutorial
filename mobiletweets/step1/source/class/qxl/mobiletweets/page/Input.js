@@ -19,36 +19,35 @@
 /**
  * This page displays an input form to enter the username to show.
  */
-qx.Class.define("qxl.mobiletweets.page.Input",
-{
-  extend : qx.ui.mobile.page.NavigationPage,
+qx.Class.define("qxl.mobiletweets.page.Input", {
+  extend: qx.ui.mobile.page.NavigationPage,
 
-  construct : function() {
-    this.base(arguments);
+  construct() {
+    super();
     this.setTitle("Mobile Tweets");
   },
 
-
-  events : {
+  events: {
     /** Fired when the tweets of a user are requested */
-    "requestTweet" : "qx.event.type.Data"
+    requestTweet: "qx.event.type.Data",
   },
 
-
-  members : {
-    __form : null,
-    __input : null,
+  members: {
+    __form: null,
+    __input: null,
 
     // overridden
-    _initialize : function() {
-      this.base(arguments);
+    _initialize() {
+      super._initialize();
 
-      var title = new qx.ui.mobile.form.Title("Please enter an identi.ca username");
+      var title = new qx.ui.mobile.form.Title(
+        "Please enter an identi.ca username"
+      );
       this.getContent().add(title);
 
-      var form = this.__form = new qx.ui.mobile.form.Form();
+      var form = (this.__form = new qx.ui.mobile.form.Form());
 
-      var input = this.__input = new qx.ui.mobile.form.TextField();
+      var input = (this.__input = new qx.ui.mobile.form.TextField());
       input.setPlaceholder("Username");
       input.setRequired(true);
       form.add(input, "Username");
@@ -65,17 +64,16 @@ qx.Class.define("qxl.mobiletweets.page.Input",
       this.getContent().add(button);
     },
 
-
     /**
      * On Tap handler. Called when the user taps on the input button.
      * @param evt {qx.event.type.Data} the causing event.
      */
-    _onTap : function(evt) {
+    _onTap(evt) {
       // validate the form
       if (this.__form.validate()) {
         var username = this.__input.getValue();
         this.fireDataEvent("requestTweet", username);
       }
-    }
-  }
+    },
+  },
 });

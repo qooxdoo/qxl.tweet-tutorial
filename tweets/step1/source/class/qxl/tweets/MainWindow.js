@@ -1,9 +1,8 @@
-qx.Class.define("qxl.tweets.MainWindow",
-{
-  extend : qx.ui.window.Window,
+qx.Class.define("qxl.tweets.MainWindow", {
+  extend: qx.ui.window.Window,
 
-  construct : function() {
-    this.base(arguments, "tweets");
+  construct() {
+    super("tweets");
 
     // hide the window buttons
     this.setShowClose(false);
@@ -13,5 +12,5 @@ qx.Class.define("qxl.tweets.MainWindow",
     // adjust size
     this.setWidth(250);
     this.setHeight(300);
-  }
+  },
 });

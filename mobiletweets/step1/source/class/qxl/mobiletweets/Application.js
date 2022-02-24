@@ -26,35 +26,28 @@
  *
  * @asset(qxl/mobiletweets/*)
  */
-qx.Class.define("qxl.mobiletweets.Application",
-{
-  extend : qx.application.Mobile,
+qx.Class.define("qxl.mobiletweets.Application", {
+  extend: qx.application.Mobile,
 
-
-  properties :
-  {
+  properties: {
     /** Holds all feeds of a user */
-    tweets :
-    {
-      check : "qx.data.Array",
-      nullable : true,
-      init : null,
-      event : "changeTweets",
-      apply : "_applyTweets" // just for logging the data
+    tweets: {
+      check: "qx.data.Array",
+      nullable: true,
+      init: null,
+      event: "changeTweets",
+      apply: "_applyTweets", // just for logging the data
     },
 
-
     /** The current username */
-    username :
-    {
-      check : "String",
-      nullable : false,
-      init : "",
-      event : "changeUsername",
-      apply : "_applyUsername" // this method will be called when the property is set
-    }
+    username: {
+      check: "String",
+      nullable: false,
+      init: "",
+      event: "changeUsername",
+      apply: "_applyUsername", // this method will be called when the property is set
+    },
   },
-
 
   /*
   *****************************************************************************
@@ -62,17 +55,16 @@ qx.Class.define("qxl.mobiletweets.Application",
   *****************************************************************************
   */
 
-  members :
-  {
-    __inputPage : null,
+  members: {
+    __inputPage: null,
 
     /**
      * This method contains the initial application code and gets called
      * during startup of the application
      */
-    main : function() {
+    main() {
       // Call super class
-      this.base(arguments);
+      super.main();
 
       // Enable logging in debug variant
       if (qx.core.Environment.get("qx.debug")) {
@@ -93,7 +85,7 @@ qx.Class.define("qxl.mobiletweets.Application",
       var manager = new qx.ui.mobile.page.Manager(false);
 
       // Create an instance of the Input class and initial show it
-      var inputPage = this.__inputPage = new qxl.mobiletweets.page.Input();
+      var inputPage = (this.__inputPage = new qxl.mobiletweets.page.Input());
 
       // Add page to manager
       manager.addDetail(inputPage);
@@ -116,53 +108,70 @@ qx.Class.define("qxl.mobiletweets.Application",
       manager.addDetail(tweetPage);
 
       // Load the tweets and show the tweets page
-      inputPage.addListener("requestTweet", function(evt) {
-        this.setUsername(evt.getData());
-        tweetsPage.show();
-      }, this);
+      inputPage.addListener(
+        "requestTweet",
+        function (evt) {
+          this.setUsername(evt.getData());
+          tweetsPage.show();
+        },
+        this
+      );
 
       // Show the selected tweet
-      tweetsPage.addListener("showTweet", function(evt) {
-        var index = evt.getData();
-        tweetPage.setTweet(this.getTweets().getItem(index));
-        tweetPage.show();
-      }, this);
+      tweetsPage.addListener(
+        "showTweet",
+        function (evt) {
+          var index = evt.getData();
+          tweetPage.setTweet(this.getTweets().getItem(index));
+          tweetPage.show();
+        },
+        this
+      );
 
       // Return to the Input page
-      tweetsPage.addListener("back", function(evt) {
-        inputPage.show({
-          reverse: true
-        });
-      }, this);
+      tweetsPage.addListener(
+        "back",
+        function (evt) {
+          inputPage.show({
+            reverse: true,
+          });
+        },
+        this
+      );
 
       // Return to the Tweets Page.
-      tweetPage.addListener("back", function(evt) {
-        tweetsPage.show({
-          reverse: true
-        });
-      }, this);
+      tweetPage.addListener(
+        "back",
+        function (evt) {
+          tweetsPage.show({
+            reverse: true,
+          });
+        },
+        this
+      );
     },
 
-
     // property apply
-    _applyUsername : function(value, old) {
+    _applyUsername(value, old) {
       this.__loadTweets();
     },
 
     // property apply
-    _applyTweets : function(value, old) {
+    _applyTweets(value, old) {
       // print the loaded data in the console
       this.debug("Tweets: ", qx.lang.Json.stringify(value)); // just display the data
     },
 
-
     /**
      * Loads all tweets of the currently set user.
      */
-    __loadTweets : function() {
+    __loadTweets() {
       // Mocked Identica Tweets API
       // Create a new JSONP store instance with the given url
-      var url = "http://demo.qooxdoo.org/" + qx.core.Environment.get("qx.version") + "/tweets_step4.5/resource/tweets/service.js";
+      var url =
+        "http://demo.qooxdoo.org/" +
+        qx.core.Environment.get("qx.version") +
+        "/tweets_step4.5/resource/tweets/service.js";
 
       var store = new qx.data.store.Jsonp();
       store.setCallbackName("callback");
@@ -172,12 +181,11 @@ qx.Class.define("qxl.mobiletweets.Application",
       store.bind("model", this, "tweets");
     },
 
-
     /**
      * Shows the input page of the application.
      */
-    __showStartPage : function() {
-      this.__inputPage.show({reverse:true});
-    }
-  }
+    __showStartPage() {
+      this.__inputPage.show({ reverse: true });
+    },
+  },
 });

@@ -8,11 +8,8 @@
 
 ************************************************************************ */
 
-qx.Theme.define("qxl.tweets.theme.Decoration",
-{
-  extend : qx.theme.simple.Decoration,
+qx.Theme.define("qxl.tweets.theme.Decoration", {
+  extend: qx.theme.simple.Decoration,
 
-  decorations :
-  {
-  }
+  decorations: {},
 });
