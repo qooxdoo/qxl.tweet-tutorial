@@ -1,4 +1,5 @@
 {
+  "$schema": "https://qooxdoo.org/schema/qooxdoo-1-0-0.json",
   "libraries": [
    { "path":"tweets/step1" },
    { "path":"tweets/step2" },
